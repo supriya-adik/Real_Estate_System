@@ -1,0 +1,27 @@
+<%= link_to "Back To Home",controller:"users",action:'home/index' %>
+<div class="">
+  <h2>User Details</h2>
+ <%= link_to 'Patient Record', user_path(@user) %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @user.mobile %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Home', root_url %>

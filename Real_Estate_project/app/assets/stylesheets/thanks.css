@@ -1,0 +1,33 @@
+.background {
+	padding: 1%;
+	background-image: url("banner1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.background1 
+{
+	padding: 1%;
+	background-image: url("flat3.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+h2 {
+	color:white;
+}
+
+div.pos
+{
+  position: absolute;
+}
+.block {
+	color:white;
+	font-size:40px;
+	margin-top : 200px;
+	margin-left :100px;
+	
+
+}

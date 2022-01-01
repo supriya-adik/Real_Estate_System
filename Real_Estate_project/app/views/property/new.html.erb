@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add property</title>
+</head>
+<body>
+  
+<h1>ADD NEW PROPERTY</h1>
+
+  <% if flash[:errors]%>
+    <div id="error_explanation">
+       <% flash[:errors].each do |error| %>
+       <p style="color:red"><%= error %></p>
+       <%end%>
+    </div>
+  <% end %>
+
+<%= form_for @property, url: {action: :create} do |form| %>  
+  <div class="field">
+  	<label>Property Type</label>
+    <%= form.text_field :p_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :place %>
+    <%= form.text_field :place %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :short_desc %>
+    <%= form.text_field :short_desc %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :User_id %>
+    <%= form.text_field :User_id %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit  "Upload"%>
+  </div>
+<% end %>
+
+
+</body>
+</html>

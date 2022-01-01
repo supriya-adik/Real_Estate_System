@@ -1,0 +1,9 @@
+<h1 style="margin-left:300px;color: blue;">New User</h1>
+
+<%= render 'form', user: @user %>
+
+<%= link_to 'Back', users_path %> &nbsp;&nbsp;&nbsp;
+<%= link_to "Go To Home ", controller: "home", action: 'index'  %>
+
+&nbsp;&nbsp;&nbsp;<%= link_to "If User Already Exists Click Here..  ", "/login" %>
+

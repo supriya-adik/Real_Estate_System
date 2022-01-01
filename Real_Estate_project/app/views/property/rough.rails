@@ -1,0 +1,88 @@
+  <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+
+
+
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+          {% for i in images %}
+          <div class="card" style="width:18rem; float:left">
+           <img src="{{i.imagefile.url}}" width="70" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">{{i.plant_name|upper }} &nbsp;&nbsp;&nbsp;<span style="color:green">PRICE :{{i.price}}</span></h5>
+
+                <a href="#" class="btn btn-primary">ADD TO CART</a>
+              </div>
+                {% endfor %}
+          </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :place %>
+    <%= form.text_field :place %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %> %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :short_desc %>
+    <%= form.text_field :short_desc %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :User_id  %>
+    <%= form.text_field :User_id %>
+  </div>
+
+
+@property = Property.create(property_params)
+    if @property.valid?
+       redirect_to root_url
+     else
+        flash[:notice] = "Error: Record not Created"
+        render(action: 'new')
+
+

@@ -1,0 +1,66 @@
+body {
+      padding: 1%;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   }
+* {
+      box-sizing: border-box;
+   }
+.font 
+{
+  font-family: 'Abril Fatface', cursive;	
+}
+
+.container {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  left:120px;
+  top:150px;
+  font-family:"Times New Roman", Times, serif;
+  font-weight:bold;
+  font-size:30px;
+  color:white;
+  background-size:cover; 
+}
+
+.t-block {
+   margin:0px;
+   padding:0px;
+}
+
+.p-about
+ {
+   text-align: center;
+   color:gray;
+   height:auto;;
+   width:70%;
+   margin-left:50px;
+   margin-top:50px;
+
+} 
+
+.second-block{
+   position: absolute;
+   top :100px;
+   left:100px;
+   text-align: center;
+   color:maroon;
+}
+
+.font-poppins
+{
+	font-family: 'Abril Fatface', cursive;
+   font-family: 'Poppins', sans-serif;
+}
+
+.left, .right, .center {
+      float: left;
+      width: 33%;
+      color: white;
+      padding: 10px;
+      height: 300px;
+      text-align: center;
+   }
